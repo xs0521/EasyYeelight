@@ -1,0 +1,6 @@
+framework module Pods_Yeelight {
+  umbrella header "Pods-Yeelight-umbrella.h"
+
+  export *
+  module * { export * }
+}

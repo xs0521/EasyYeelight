@@ -1,0 +1,875 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		104C17159F32C565110A7698 /* Pods_Yeelight_YeelightUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0175E798D92FB567A9537A58 /* Pods_Yeelight_YeelightUITests.framework */; };
+		7EA6C181B4C5038307EFA404 /* Pods_Yeelight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE42DC1B7E896B24134AFFB0 /* Pods_Yeelight.framework */; };
+		B800A1F12AE4CB9900BAA1C4 /* AppConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800A1F02AE4CB9900BAA1C4 /* AppConst.swift */; };
+		B800A1F42AE5202A00BAA1C4 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800A1F32AE5202A00BAA1C4 /* Device.swift */; };
+		B800A1F92AE538CA00BAA1C4 /* MessageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800A1F82AE538CA00BAA1C4 /* MessageType.swift */; };
+		B8185D312AE37F8C003ECA97 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8185D302AE37F8C003ECA97 /* Socket.swift */; };
+		B8185D382AE3E23D003ECA97 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8185D372AE3E23D003ECA97 /* Data+Extension.swift */; };
+		B8185D3A2AE3EC76003ECA97 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8185D392AE3EC76003ECA97 /* Dictionary+Extension.swift */; };
+		B8185D3C2AE40657003ECA97 /* UDPSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8185D3B2AE40657003ECA97 /* UDPSocket.swift */; };
+		B8185D3E2AE42F6F003ECA97 /* TCPSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8185D3D2AE42F6F003ECA97 /* TCPSocket.swift */; };
+		B8A34EA32AEE05EF00EC5109 /* YeelightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A34EA22AEE05EF00EC5109 /* YeelightApp.swift */; };
+		B8F3565229A07BB700F4407A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F3565129A07BB700F4407A /* MainView.swift */; };
+		B8F3565429A07BB800F4407A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F3565329A07BB800F4407A /* Assets.xcassets */; };
+		B8F3565729A07BB800F4407A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F3565629A07BB800F4407A /* Preview Assets.xcassets */; };
+		B8F3566229A07BB800F4407A /* YeelightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F3566129A07BB800F4407A /* YeelightTests.swift */; };
+		B8F3566C29A07BB800F4407A /* YeelightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F3566B29A07BB800F4407A /* YeelightUITests.swift */; };
+		B8F3566E29A07BB800F4407A /* YeelightUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F3566D29A07BB800F4407A /* YeelightUITestsLaunchTests.swift */; };
+		B8F3568029A0B73A00F4407A /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F3567F29A0B73A00F4407A /* String+Extension.swift */; };
+		B8F3568229A1A51500F4407A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F3568129A1A51500F4407A /* AppDelegate.swift */; };
+		B8F3568429A1A61100F4407A /* AppEventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F3568329A1A61100F4407A /* AppEventMonitor.swift */; };
+		B8F3568A29A1B76100F4407A /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F3568929A1B76100F4407A /* UserDefaults+Extension.swift */; };
+		B8F3568E29A1E89500F4407A /* MainCellContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F3568D29A1E89500F4407A /* MainCellContainerView.swift */; };
+		B8F3569029A2262B00F4407A /* NSNotification+Entension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F3568F29A2262B00F4407A /* NSNotification+Entension.swift */; };
+		EE172D67CBCBC91D33620DAE /* Pods_YeelightTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70218B58F6FA6BBDB835963B /* Pods_YeelightTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B8F3565E29A07BB800F4407A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8F3564429A07BB700F4407A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8F3564B29A07BB700F4407A;
+			remoteInfo = Yeelight;
+		};
+		B8F3566829A07BB800F4407A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8F3564429A07BB700F4407A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8F3564B29A07BB700F4407A;
+			remoteInfo = Yeelight;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B8185D362AE38062003ECA97 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0175E798D92FB567A9537A58 /* Pods_Yeelight_YeelightUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yeelight_YeelightUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DE8E9C425A0BF80F568B3CF /* Pods-YeelightTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YeelightTests.debug.xcconfig"; path = "Target Support Files/Pods-YeelightTests/Pods-YeelightTests.debug.xcconfig"; sourceTree = "<group>"; };
+		70218B58F6FA6BBDB835963B /* Pods_YeelightTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YeelightTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8007A2007F3B4A8C487E0F0D /* Pods-Yeelight-YeelightUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yeelight-YeelightUITests.release.xcconfig"; path = "Target Support Files/Pods-Yeelight-YeelightUITests/Pods-Yeelight-YeelightUITests.release.xcconfig"; sourceTree = "<group>"; };
+		88D02DCCCFB2438E7DA30D4B /* Pods-YeelightTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YeelightTests.release.xcconfig"; path = "Target Support Files/Pods-YeelightTests/Pods-YeelightTests.release.xcconfig"; sourceTree = "<group>"; };
+		AB6A3BC0A607341A82D064D6 /* Pods-Yeelight-YeelightUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yeelight-YeelightUITests.debug.xcconfig"; path = "Target Support Files/Pods-Yeelight-YeelightUITests/Pods-Yeelight-YeelightUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B7E6F17787155E605B565DC0 /* Pods-Yeelight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yeelight.debug.xcconfig"; path = "Target Support Files/Pods-Yeelight/Pods-Yeelight.debug.xcconfig"; sourceTree = "<group>"; };
+		B800A1F02AE4CB9900BAA1C4 /* AppConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConst.swift; sourceTree = "<group>"; };
+		B800A1F32AE5202A00BAA1C4 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		B800A1F82AE538CA00BAA1C4 /* MessageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageType.swift; sourceTree = "<group>"; };
+		B8185D302AE37F8C003ECA97 /* Socket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
+		B8185D372AE3E23D003ECA97 /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
+		B8185D392AE3EC76003ECA97 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
+		B8185D3B2AE40657003ECA97 /* UDPSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDPSocket.swift; sourceTree = "<group>"; };
+		B8185D3D2AE42F6F003ECA97 /* TCPSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCPSocket.swift; sourceTree = "<group>"; };
+		B8A34EA22AEE05EF00EC5109 /* YeelightApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YeelightApp.swift; sourceTree = "<group>"; };
+		B8F3564C29A07BB700F4407A /* Yeelight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yeelight.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8F3565129A07BB700F4407A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		B8F3565329A07BB800F4407A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B8F3565629A07BB800F4407A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B8F3565829A07BB800F4407A /* Yeelight.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Yeelight.entitlements; sourceTree = "<group>"; };
+		B8F3565D29A07BB800F4407A /* YeelightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YeelightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8F3566129A07BB800F4407A /* YeelightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YeelightTests.swift; sourceTree = "<group>"; };
+		B8F3566729A07BB800F4407A /* YeelightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YeelightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8F3566B29A07BB800F4407A /* YeelightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YeelightUITests.swift; sourceTree = "<group>"; };
+		B8F3566D29A07BB800F4407A /* YeelightUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YeelightUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B8F3567A29A07DBB00F4407A /* Yeelight-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Yeelight-Bridging-Header.h"; sourceTree = "<group>"; };
+		B8F3567F29A0B73A00F4407A /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		B8F3568129A1A51500F4407A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B8F3568329A1A61100F4407A /* AppEventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEventMonitor.swift; sourceTree = "<group>"; };
+		B8F3568929A1B76100F4407A /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
+		B8F3568D29A1E89500F4407A /* MainCellContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCellContainerView.swift; sourceTree = "<group>"; };
+		B8F3568F29A2262B00F4407A /* NSNotification+Entension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNotification+Entension.swift"; sourceTree = "<group>"; };
+		BE42DC1B7E896B24134AFFB0 /* Pods_Yeelight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yeelight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEC108FD17DAE37F6503B5DA /* Pods-Yeelight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yeelight.release.xcconfig"; path = "Target Support Files/Pods-Yeelight/Pods-Yeelight.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B8F3564929A07BB700F4407A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EA6C181B4C5038307EFA404 /* Pods_Yeelight.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8F3565A29A07BB800F4407A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE172D67CBCBC91D33620DAE /* Pods_YeelightTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8F3566429A07BB800F4407A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				104C17159F32C565110A7698 /* Pods_Yeelight_YeelightUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A9D73A502872A246E9BEF6AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B7E6F17787155E605B565DC0 /* Pods-Yeelight.debug.xcconfig */,
+				FEC108FD17DAE37F6503B5DA /* Pods-Yeelight.release.xcconfig */,
+				AB6A3BC0A607341A82D064D6 /* Pods-Yeelight-YeelightUITests.debug.xcconfig */,
+				8007A2007F3B4A8C487E0F0D /* Pods-Yeelight-YeelightUITests.release.xcconfig */,
+				1DE8E9C425A0BF80F568B3CF /* Pods-YeelightTests.debug.xcconfig */,
+				88D02DCCCFB2438E7DA30D4B /* Pods-YeelightTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B21B1F405CC5D5ACBD220CA3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE42DC1B7E896B24134AFFB0 /* Pods_Yeelight.framework */,
+				0175E798D92FB567A9537A58 /* Pods_Yeelight_YeelightUITests.framework */,
+				70218B58F6FA6BBDB835963B /* Pods_YeelightTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B800A1EE2AE4CB6300BAA1C4 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B800A1F02AE4CB9900BAA1C4 /* AppConst.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B800A1EF2AE4CB6C00BAA1C4 /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				B8185D302AE37F8C003ECA97 /* Socket.swift */,
+				B8185D3B2AE40657003ECA97 /* UDPSocket.swift */,
+				B8185D3D2AE42F6F003ECA97 /* TCPSocket.swift */,
+				B800A1F82AE538CA00BAA1C4 /* MessageType.swift */,
+			);
+			path = Socket;
+			sourceTree = "<group>";
+		};
+		B800A1F22AE5201E00BAA1C4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B800A1F32AE5202A00BAA1C4 /* Device.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B800A1F52AE537A200BAA1C4 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				B800A1F62AE537B100BAA1C4 /* Main */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		B800A1F62AE537B100BAA1C4 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B800A1F72AE537BC00BAA1C4 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B800A1F72AE537BC00BAA1C4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B8F3565129A07BB700F4407A /* MainView.swift */,
+				B8F3568D29A1E89500F4407A /* MainCellContainerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B8F3564329A07BB700F4407A = {
+			isa = PBXGroup;
+			children = (
+				B8F3564E29A07BB700F4407A /* Yeelight */,
+				B8F3566029A07BB800F4407A /* YeelightTests */,
+				B8F3566A29A07BB800F4407A /* YeelightUITests */,
+				B8F3564D29A07BB700F4407A /* Products */,
+				A9D73A502872A246E9BEF6AF /* Pods */,
+				B21B1F405CC5D5ACBD220CA3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B8F3564D29A07BB700F4407A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B8F3564C29A07BB700F4407A /* Yeelight.app */,
+				B8F3565D29A07BB800F4407A /* YeelightTests.xctest */,
+				B8F3566729A07BB800F4407A /* YeelightUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B8F3564E29A07BB700F4407A /* Yeelight */ = {
+			isa = PBXGroup;
+			children = (
+				B8A34EA22AEE05EF00EC5109 /* YeelightApp.swift */,
+				B8F3568129A1A51500F4407A /* AppDelegate.swift */,
+				B8F3568329A1A61100F4407A /* AppEventMonitor.swift */,
+				B8F3565329A07BB800F4407A /* Assets.xcassets */,
+				B8F3565829A07BB800F4407A /* Yeelight.entitlements */,
+				B8F3567A29A07DBB00F4407A /* Yeelight-Bridging-Header.h */,
+				B800A1F52AE537A200BAA1C4 /* Module */,
+				B800A1F22AE5201E00BAA1C4 /* Models */,
+				B800A1EF2AE4CB6C00BAA1C4 /* Socket */,
+				B800A1EE2AE4CB6300BAA1C4 /* App */,
+				B8F3567E29A0B72B00F4407A /* Extension */,
+				B8F3565529A07BB800F4407A /* Preview Content */,
+			);
+			path = Yeelight;
+			sourceTree = "<group>";
+		};
+		B8F3565529A07BB800F4407A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B8F3565629A07BB800F4407A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B8F3566029A07BB800F4407A /* YeelightTests */ = {
+			isa = PBXGroup;
+			children = (
+				B8F3566129A07BB800F4407A /* YeelightTests.swift */,
+			);
+			path = YeelightTests;
+			sourceTree = "<group>";
+		};
+		B8F3566A29A07BB800F4407A /* YeelightUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B8F3566B29A07BB800F4407A /* YeelightUITests.swift */,
+				B8F3566D29A07BB800F4407A /* YeelightUITestsLaunchTests.swift */,
+			);
+			path = YeelightUITests;
+			sourceTree = "<group>";
+		};
+		B8F3567E29A0B72B00F4407A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B8F3567F29A0B73A00F4407A /* String+Extension.swift */,
+				B8F3568929A1B76100F4407A /* UserDefaults+Extension.swift */,
+				B8F3568F29A2262B00F4407A /* NSNotification+Entension.swift */,
+				B8185D372AE3E23D003ECA97 /* Data+Extension.swift */,
+				B8185D392AE3EC76003ECA97 /* Dictionary+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B8F3564B29A07BB700F4407A /* Yeelight */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8F3567129A07BB800F4407A /* Build configuration list for PBXNativeTarget "Yeelight" */;
+			buildPhases = (
+				9DFC15E02734A985CBFEFCC0 /* [CP] Check Pods Manifest.lock */,
+				B8F3564829A07BB700F4407A /* Sources */,
+				B8F3564929A07BB700F4407A /* Frameworks */,
+				B8F3564A29A07BB700F4407A /* Resources */,
+				B8185D362AE38062003ECA97 /* Embed Frameworks */,
+				93C6A5E6B7192BBB8180E231 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Yeelight;
+			productName = Yeelight;
+			productReference = B8F3564C29A07BB700F4407A /* Yeelight.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B8F3565C29A07BB800F4407A /* YeelightTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8F3567429A07BB800F4407A /* Build configuration list for PBXNativeTarget "YeelightTests" */;
+			buildPhases = (
+				BDF97DFA8DC68C84AED765CD /* [CP] Check Pods Manifest.lock */,
+				B8F3565929A07BB800F4407A /* Sources */,
+				B8F3565A29A07BB800F4407A /* Frameworks */,
+				B8F3565B29A07BB800F4407A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B8F3565F29A07BB800F4407A /* PBXTargetDependency */,
+			);
+			name = YeelightTests;
+			productName = YeelightTests;
+			productReference = B8F3565D29A07BB800F4407A /* YeelightTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B8F3566629A07BB800F4407A /* YeelightUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8F3567729A07BB800F4407A /* Build configuration list for PBXNativeTarget "YeelightUITests" */;
+			buildPhases = (
+				B191128EFD162ABF9B52B6F3 /* [CP] Check Pods Manifest.lock */,
+				B8F3566329A07BB800F4407A /* Sources */,
+				B8F3566429A07BB800F4407A /* Frameworks */,
+				B8F3566529A07BB800F4407A /* Resources */,
+				E93A6547E4E7AA5649D623B0 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B8F3566929A07BB800F4407A /* PBXTargetDependency */,
+			);
+			name = YeelightUITests;
+			productName = YeelightUITests;
+			productReference = B8F3566729A07BB800F4407A /* YeelightUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B8F3564429A07BB700F4407A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					B8F3564B29A07BB700F4407A = {
+						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
+					};
+					B8F3565C29A07BB800F4407A = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = B8F3564B29A07BB700F4407A;
+					};
+					B8F3566629A07BB800F4407A = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = B8F3564B29A07BB700F4407A;
+					};
+				};
+			};
+			buildConfigurationList = B8F3564729A07BB700F4407A /* Build configuration list for PBXProject "Yeelight" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B8F3564329A07BB700F4407A;
+			productRefGroup = B8F3564D29A07BB700F4407A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B8F3564B29A07BB700F4407A /* Yeelight */,
+				B8F3565C29A07BB800F4407A /* YeelightTests */,
+				B8F3566629A07BB800F4407A /* YeelightUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B8F3564A29A07BB700F4407A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8F3565729A07BB800F4407A /* Preview Assets.xcassets in Resources */,
+				B8F3565429A07BB800F4407A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8F3565B29A07BB800F4407A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8F3566529A07BB800F4407A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		93C6A5E6B7192BBB8180E231 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Yeelight/Pods-Yeelight-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Yeelight/Pods-Yeelight-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Yeelight/Pods-Yeelight-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DFC15E02734A985CBFEFCC0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Yeelight-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B191128EFD162ABF9B52B6F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Yeelight-YeelightUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDF97DFA8DC68C84AED765CD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YeelightTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E93A6547E4E7AA5649D623B0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Yeelight-YeelightUITests/Pods-Yeelight-YeelightUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Yeelight-YeelightUITests/Pods-Yeelight-YeelightUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Yeelight-YeelightUITests/Pods-Yeelight-YeelightUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B8F3564829A07BB700F4407A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8185D382AE3E23D003ECA97 /* Data+Extension.swift in Sources */,
+				B8185D3A2AE3EC76003ECA97 /* Dictionary+Extension.swift in Sources */,
+				B8F3565229A07BB700F4407A /* MainView.swift in Sources */,
+				B800A1F92AE538CA00BAA1C4 /* MessageType.swift in Sources */,
+				B800A1F42AE5202A00BAA1C4 /* Device.swift in Sources */,
+				B8F3568429A1A61100F4407A /* AppEventMonitor.swift in Sources */,
+				B8F3568E29A1E89500F4407A /* MainCellContainerView.swift in Sources */,
+				B8F3568029A0B73A00F4407A /* String+Extension.swift in Sources */,
+				B8F3569029A2262B00F4407A /* NSNotification+Entension.swift in Sources */,
+				B8F3568229A1A51500F4407A /* AppDelegate.swift in Sources */,
+				B8185D312AE37F8C003ECA97 /* Socket.swift in Sources */,
+				B8185D3E2AE42F6F003ECA97 /* TCPSocket.swift in Sources */,
+				B8185D3C2AE40657003ECA97 /* UDPSocket.swift in Sources */,
+				B800A1F12AE4CB9900BAA1C4 /* AppConst.swift in Sources */,
+				B8A34EA32AEE05EF00EC5109 /* YeelightApp.swift in Sources */,
+				B8F3568A29A1B76100F4407A /* UserDefaults+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8F3565929A07BB800F4407A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8F3566229A07BB800F4407A /* YeelightTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8F3566329A07BB800F4407A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8F3566E29A07BB800F4407A /* YeelightUITestsLaunchTests.swift in Sources */,
+				B8F3566C29A07BB800F4407A /* YeelightUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B8F3565F29A07BB800F4407A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8F3564B29A07BB700F4407A /* Yeelight */;
+			targetProxy = B8F3565E29A07BB800F4407A /* PBXContainerItemProxy */;
+		};
+		B8F3566929A07BB800F4407A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8F3564B29A07BB700F4407A /* Yeelight */;
+			targetProxy = B8F3566829A07BB800F4407A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B8F3566F29A07BB800F4407A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B8F3567029A07BB800F4407A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		B8F3567229A07BB800F4407A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7E6F17787155E605B565DC0 /* Pods-Yeelight.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Yeelight/Yeelight.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 231028;
+				DEVELOPMENT_ASSET_PATHS = "\"Yeelight/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Yeelight",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = EasyYeeLight;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xs0521.easyYeelight;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Yeelight/Yeelight-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B8F3567329A07BB800F4407A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEC108FD17DAE37F6503B5DA /* Pods-Yeelight.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Yeelight/Yeelight.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 231028;
+				DEVELOPMENT_ASSET_PATHS = "\"Yeelight/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Yeelight",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = EasyYeeLight;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xs0521.easyYeelight;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Yeelight/Yeelight-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		B8F3567529A07BB800F4407A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DE8E9C425A0BF80F568B3CF /* Pods-YeelightTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zerobc.YeelightTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yeelight.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Yeelight";
+			};
+			name = Debug;
+		};
+		B8F3567629A07BB800F4407A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88D02DCCCFB2438E7DA30D4B /* Pods-YeelightTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zerobc.YeelightTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yeelight.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Yeelight";
+			};
+			name = Release;
+		};
+		B8F3567829A07BB800F4407A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB6A3BC0A607341A82D064D6 /* Pods-Yeelight-YeelightUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zerobc.YeelightUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Yeelight;
+			};
+			name = Debug;
+		};
+		B8F3567929A07BB800F4407A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8007A2007F3B4A8C487E0F0D /* Pods-Yeelight-YeelightUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zerobc.YeelightUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Yeelight;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B8F3564729A07BB700F4407A /* Build configuration list for PBXProject "Yeelight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8F3566F29A07BB800F4407A /* Debug */,
+				B8F3567029A07BB800F4407A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8F3567129A07BB800F4407A /* Build configuration list for PBXNativeTarget "Yeelight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8F3567229A07BB800F4407A /* Debug */,
+				B8F3567329A07BB800F4407A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8F3567429A07BB800F4407A /* Build configuration list for PBXNativeTarget "YeelightTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8F3567529A07BB800F4407A /* Debug */,
+				B8F3567629A07BB800F4407A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8F3567729A07BB800F4407A /* Build configuration list for PBXNativeTarget "YeelightUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8F3567829A07BB800F4407A /* Debug */,
+				B8F3567929A07BB800F4407A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B8F3564429A07BB700F4407A /* Project object */;
+}
