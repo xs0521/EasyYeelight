@@ -15,7 +15,7 @@ enum Power: String, Codable {
 struct Device: Codable, Identifiable, Hashable {
     
     static func == (lhs: Device, rhs: Device) -> Bool {
-        return lhs.ip == rhs.ip
+        return lhs.id == rhs.id
     }
     
     let ct: Int
@@ -25,10 +25,10 @@ struct Device: Codable, Identifiable, Hashable {
             open = power == .on
         }
     }
-    let id, ip, model: String
+    let id, host, model, location: String
     var bright: Float
     var hue: Int
-    let port: UInt16
+    var port: UInt16
     let date: String
     let colorMode, sat: Int
     let support: String
@@ -42,7 +42,7 @@ struct Device: Codable, Identifiable, Hashable {
     enum CodingKeys: String, CodingKey {
         case ct, name, port
         case cacheControl = "Cache-Control"
-        case power, id, ip, model, hue, bright
+        case power, id, host, model, hue, bright
         case date = "Date"
         case colorMode = "color_mode"
         case sat, support
@@ -50,6 +50,7 @@ struct Device: Codable, Identifiable, Hashable {
         case rgb
         case server = "Server"
         case ext = "Ext"
+        case location = "Location"
     }
     
     mutating func update() -> Void {

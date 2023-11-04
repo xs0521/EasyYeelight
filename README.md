@@ -29,7 +29,7 @@ The latest official **installers** and **portable versions** for macOS can be fo
 
 Find a bug or have a feature request? Please file an <a href="https://github.com/xs0521/EasyYeelight/issues" targe="_blank">issue</a>!
 
-## Feature
+## Features
 
 - [x] open
 - [x] brightness
@@ -37,4 +37,10 @@ Find a bug or have a feature request? Please file an <a href="https://github.com
 - [ ] scene
 - [ ] music
 - [ ] Flow mode
+
+## Thanks
+
+Logo by [Izumi](https://unsplash.com/@itsaizumi?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/lighted-orange-cfl-bylb-HfVfXJjktWw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)  
+
+
 

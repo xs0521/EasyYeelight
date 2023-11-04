@@ -13,7 +13,8 @@ private let discover_message = """
                 """
 private let host = "239.255.255.250"
 private let port: UInt16 = 1982
-private let location = "Location"
+private let kLocation = "Location"
+private let kYeeLight = "yeelight://"
 
 class UDPSocket: NSObject {
     
@@ -51,32 +52,34 @@ extension UDPSocket: GCDAsyncUdpSocketDelegate {
         
         "didReceive start ---------".p()
         
-        let s = String(data: data, encoding: String.Encoding.utf8)!
-        let rows = s.split(separator: "\r\n").map(String.init)
+        let content = String(data: data, encoding: String.Encoding.utf8)!
+        let rows = content.split(separator: "\r\n").map(String.init)
         var proprieties = [String : Any]()
         for s in rows {
-            if s.contains(location) {
-                let components = s.components(separatedBy: "//")
-                var addr: String? = nil
-                if components.count >= 2 {
-                    addr = components.last
-                }
-                guard let addr = addr else { return }
-                let parts = addr.split(separator: ":").map(String.init)
-                proprieties["ip"] = parts.first?.removeHeadAndTailSpace
-                proprieties["port"] = UInt16(parts.last?.removeHeadAndTailSpace ?? "0")
-                continue
-            }
-            let values = s.split(separator: ":").map(String.init)
-            if values.count == 2 {
-                proprieties[values.first!] = values.last?.removeHeadAndTailSpace
-                if let value = values.last?.removeHeadAndTailSpace, let v = Int(value) {
-                    proprieties[values.first!] = v
+            if s.contains(": ") {
+                let itemList = s.components(separatedBy: ": ")
+                if itemList.count > 1 {
+                    proprieties[itemList[0]] = itemList[1]
+                    if let number = Int(itemList[1]) {
+                        proprieties[itemList[0]] = number
+                    }
                 }
             }
         }
-        
+#if DEBUG
         print(proprieties)
+#endif
+        guard let location = proprieties[kLocation] as? String else {
+            return
+        }
+        
+        let hostPort = location.replacingOccurrences(of: kYeeLight, with: "")
+        
+        let list = hostPort.components(separatedBy: ":")
+        if list.count > 1 {
+            proprieties["host"] = list[0]
+            proprieties["port"] = UInt16(list[1]) ?? 0
+        }
         
         guard let jsonData = proprieties.toData() else { return }
         
@@ -85,7 +88,7 @@ extension UDPSocket: GCDAsyncUdpSocketDelegate {
             device.update()
             completion?([device])
         }catch {
-            "JSON fail".p()
+            "JSON fail \(error)".p()
         }
     }
     

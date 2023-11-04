@@ -22,23 +22,23 @@ class TCPSocket: NSObject {
         socket = GCDAsyncSocket(delegate: self, delegateQueue: DispatchQueue.main)
     }
     
-    func enbleConnect(_ ip: String) -> Bool {
-        return !connected || ip != currentIP
+    func enbleConnect(_ host: String) -> Bool {
+        return !connected || host != currentIP
     }
     
     func connect(_ device: Device) -> Void {
         
-        if enbleConnect(device.ip) == false {
+        if enbleConnect(device.host) == false {
             return
         }
         connected = true
-        currentIP = device.ip
+        currentIP = device.host
         
         disConnect()
         
         do {
-            "start connect ip \(device.ip) port \(device.port)".p()
-            try socket.connect(toHost: device.ip, onPort: device.port, withTimeout: -1)
+            "start connect host \(device.host) port \(device.port)".p()
+            try socket.connect(toHost: device.host, onPort: device.port, withTimeout: -1)
         } catch {
             
         }

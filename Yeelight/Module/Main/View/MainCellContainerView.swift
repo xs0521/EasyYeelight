@@ -19,7 +19,7 @@ struct MainCellContainerView: View {
             HStack (alignment: .center) {
                 HStack {
                     Image(systemName: "network")
-                    Text(item.ip)
+                    Text(item.host)
                 }
                 Spacer()
                 Toggle("", isOn: $item.open) // 2
@@ -35,7 +35,7 @@ struct MainCellContainerView: View {
                     }
                 }
                 .controlSize(.small)
-                .disabled(higIp == item.ip ? false : true)
+                .disabled(higIp == item.host ? false : true)
             }
             .frame(height: 20)
             VStack (alignment: .center) {
@@ -50,7 +50,7 @@ struct MainCellContainerView: View {
                             })
                         }
                     }
-                    .disabled(higIp == item.ip ? false : true)
+                    .disabled(higIp == item.host ? false : true)
                     Text("\(item.bright, specifier: "%.0f")")
                                     .padding()
                 }
@@ -61,7 +61,7 @@ struct MainCellContainerView: View {
         .frame(height: 60)
         .background(
             Rectangle()
-                .fill(higIp == item.ip ? Color.blue.opacity(0.2) : Color.gray.opacity(0.1))
+                .fill(higIp == item.host ? Color.blue.opacity(0.2) : Color.gray.opacity(0.1))
                 .cornerRadius(10)
                             
         )

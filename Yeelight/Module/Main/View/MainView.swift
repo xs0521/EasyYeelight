@@ -18,7 +18,7 @@ class YeeLightModel: ObservableObject {
     
     @Published var items: [Device] = []
     @Published var tapAction: GeneralCallBack<Device> = { device in
-        "tap device \(device.ip)".p()
+        "tap device \(device.host)".p()
         Socket.shared.connect(device)
     }
     @Published var higIp = ""
@@ -78,7 +78,7 @@ extension MainView {
         
         Socket.shared.socketDidConnectCallBack = { (host) in
             let device = model.items.first { device in
-                return device.ip == host
+                return device.host == host
             }
             guard let device = device else { return }
             higItem(device)
@@ -86,7 +86,7 @@ extension MainView {
     }
     
     func higItem(_ item: Device) -> Void {
-        model.higIp = item.ip
+        model.higIp = item.host
     }
 }
 
