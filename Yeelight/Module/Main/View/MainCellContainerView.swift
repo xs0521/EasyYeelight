@@ -11,6 +11,7 @@ struct MainCellContainerView: View {
     
     @Binding var item: Device
     @Binding var tapActionCallBack: GeneralCallBack<Device>
+    @Binding var colorActionCallBack: GeneralCallBack<Device>
     @Binding var higIp: String
     
     var body: some View {
@@ -36,6 +37,16 @@ struct MainCellContainerView: View {
                 }
                 .controlSize(.small)
                 .disabled(higIp == item.host ? false : true)
+                Button {
+                    colorActionCallBack(item)
+                } label: {
+                    Image(systemName: "paintpalette.fill")
+                        .foregroundStyle(.blue)
+                }
+                .buttonStyle(.plain)
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 20))
+                .disabled(higIp == item.host ? false : true)
+
             }
             .frame(height: 20)
             VStack (alignment: .center) {

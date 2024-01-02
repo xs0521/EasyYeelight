@@ -118,6 +118,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 window.becomeKey()
                 window.makeFirstResponder(popover.contentViewController)
             }
+            MainView.autoReConnect()
             eventMonitor.start()
         }
     }

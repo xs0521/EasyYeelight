@@ -3,6 +3,7 @@
 > easy to operate support yeelight bulbs, Unofficial software
 
 <img src="read_images/2023-10-29 15.06.41.png" width="600px" />
+<img src="read_images/2024-01-02_22-10-15.png" width="600px" />
 
 ## Support
 
@@ -33,10 +34,21 @@ Find a bug or have a feature request? Please file an <a href="https://github.com
 
 - [x] open
 - [x] brightness
-- [ ] colors
+- [x] colors
 - [ ] scene
 - [ ] music
-- [ ] Flow mode
+- [ ] flow mode
+
+## Update
+
+2024-01-02
+
+- colors
+
+2023-10-29
+
+- open
+- brightness
 
 ## Thanks
 

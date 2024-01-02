@@ -63,6 +63,10 @@ extension TCPSocket {
         sendCMD(msgType: .bright(value: bright))
     }
     
+    func changeColor(_ value: Int) -> Void {
+        sendCMD(msgType: .color(value: value))
+    }
+    
     func sendCMD(msgType: MessageType) -> Void {
         sendCmdReply(id: getIndex(), method: msgType.method, params: msgType.params, tag: msgType.tag)
     }

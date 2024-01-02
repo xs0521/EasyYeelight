@@ -72,8 +72,21 @@ extension Socket {
         }
     }
     
+    func changeColor(_ device: Device, _ value: Int) -> Void {
+        if device == currentDevice {
+            "changeBrightness".p()
+            tcpSocket.changeColor(value)
+        }
+    }
+    
     func connect(_ device: Device) -> Void {
         currentDevice = device
         tcpSocket.connect(device)
+    }
+    
+    func autoReConnect() -> Void {
+        guard let device = currentDevice else { return }
+        "autoReConnect \(device.host)".p()
+        connect(device)
     }
 }

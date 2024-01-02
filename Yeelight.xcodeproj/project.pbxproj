@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		104C17159F32C565110A7698 /* Pods_Yeelight_YeelightUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0175E798D92FB567A9537A58 /* Pods_Yeelight_YeelightUITests.framework */; };
 		7EA6C181B4C5038307EFA404 /* Pods_Yeelight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE42DC1B7E896B24134AFFB0 /* Pods_Yeelight.framework */; };
+		B199EC572B41C779008C6C8A /* YeeLightManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B199EC562B41C779008C6C8A /* YeeLightManager.swift */; };
+		B199EC592B42CE06008C6C8A /* CircularSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B199EC582B42CE06008C6C8A /* CircularSliderView.swift */; };
+		B199EC5B2B42FB29008C6C8A /* Color-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B199EC5A2B42FB29008C6C8A /* Color-Extension.swift */; };
 		B800A1F12AE4CB9900BAA1C4 /* AppConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800A1F02AE4CB9900BAA1C4 /* AppConst.swift */; };
 		B800A1F42AE5202A00BAA1C4 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800A1F32AE5202A00BAA1C4 /* Device.swift */; };
 		B800A1F92AE538CA00BAA1C4 /* MessageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800A1F82AE538CA00BAA1C4 /* MessageType.swift */; };
@@ -70,6 +73,9 @@
 		8007A2007F3B4A8C487E0F0D /* Pods-Yeelight-YeelightUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yeelight-YeelightUITests.release.xcconfig"; path = "Target Support Files/Pods-Yeelight-YeelightUITests/Pods-Yeelight-YeelightUITests.release.xcconfig"; sourceTree = "<group>"; };
 		88D02DCCCFB2438E7DA30D4B /* Pods-YeelightTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YeelightTests.release.xcconfig"; path = "Target Support Files/Pods-YeelightTests/Pods-YeelightTests.release.xcconfig"; sourceTree = "<group>"; };
 		AB6A3BC0A607341A82D064D6 /* Pods-Yeelight-YeelightUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yeelight-YeelightUITests.debug.xcconfig"; path = "Target Support Files/Pods-Yeelight-YeelightUITests/Pods-Yeelight-YeelightUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B199EC562B41C779008C6C8A /* YeeLightManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YeeLightManager.swift; sourceTree = "<group>"; };
+		B199EC582B42CE06008C6C8A /* CircularSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularSliderView.swift; sourceTree = "<group>"; };
+		B199EC5A2B42FB29008C6C8A /* Color-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Extension.swift"; sourceTree = "<group>"; };
 		B7E6F17787155E605B565DC0 /* Pods-Yeelight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yeelight.debug.xcconfig"; path = "Target Support Files/Pods-Yeelight/Pods-Yeelight.debug.xcconfig"; sourceTree = "<group>"; };
 		B800A1F02AE4CB9900BAA1C4 /* AppConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConst.swift; sourceTree = "<group>"; };
 		B800A1F32AE5202A00BAA1C4 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
@@ -142,6 +148,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		B199EC552B41C764008C6C8A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B199EC562B41C779008C6C8A /* YeeLightManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		B21B1F405CC5D5ACBD220CA3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +204,7 @@
 		B800A1F62AE537B100BAA1C4 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				B199EC552B41C764008C6C8A /* Model */,
 				B800A1F72AE537BC00BAA1C4 /* View */,
 			);
 			path = Main;
@@ -200,6 +215,7 @@
 			children = (
 				B8F3565129A07BB700F4407A /* MainView.swift */,
 				B8F3568D29A1E89500F4407A /* MainCellContainerView.swift */,
+				B199EC582B42CE06008C6C8A /* CircularSliderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -278,6 +294,7 @@
 				B8F3568F29A2262B00F4407A /* NSNotification+Entension.swift */,
 				B8185D372AE3E23D003ECA97 /* Data+Extension.swift */,
 				B8185D392AE3EC76003ECA97 /* Dictionary+Extension.swift */,
+				B199EC5A2B42FB29008C6C8A /* Color-Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -522,6 +539,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B199EC592B42CE06008C6C8A /* CircularSliderView.swift in Sources */,
 				B8185D382AE3E23D003ECA97 /* Data+Extension.swift in Sources */,
 				B8185D3A2AE3EC76003ECA97 /* Dictionary+Extension.swift in Sources */,
 				B8F3565229A07BB700F4407A /* MainView.swift in Sources */,
@@ -529,8 +547,10 @@
 				B800A1F42AE5202A00BAA1C4 /* Device.swift in Sources */,
 				B8F3568429A1A61100F4407A /* AppEventMonitor.swift in Sources */,
 				B8F3568E29A1E89500F4407A /* MainCellContainerView.swift in Sources */,
+				B199EC5B2B42FB29008C6C8A /* Color-Extension.swift in Sources */,
 				B8F3568029A0B73A00F4407A /* String+Extension.swift in Sources */,
 				B8F3569029A2262B00F4407A /* NSNotification+Entension.swift in Sources */,
+				B199EC572B41C779008C6C8A /* YeeLightManager.swift in Sources */,
 				B8F3568229A1A51500F4407A /* AppDelegate.swift in Sources */,
 				B8185D312AE37F8C003ECA97 /* Socket.swift in Sources */,
 				B8185D3E2AE42F6F003ECA97 /* TCPSocket.swift in Sources */,
@@ -695,10 +715,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Yeelight/Yeelight.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 231028;
+				CURRENT_PROJECT_VERSION = 240102;
 				DEVELOPMENT_ASSET_PATHS = "\"Yeelight/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -713,9 +734,10 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.xs0521.easyYeelight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Yeelight/Yeelight-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -731,10 +753,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Yeelight/Yeelight.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 231028;
+				CURRENT_PROJECT_VERSION = 240102;
 				DEVELOPMENT_ASSET_PATHS = "\"Yeelight/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -749,9 +772,10 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.xs0521.easyYeelight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Yeelight/Yeelight-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
