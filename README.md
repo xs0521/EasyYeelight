@@ -2,8 +2,9 @@
 
 > easy to operate support yeelight bulbs, Unofficial software
 
-<img src="read_images/2023-10-29 15.06.41.png" width="600px" />
-<img src="read_images/2024-01-02_22-10-15.png" width="600px" />
+<img src="IMG/2024-03-31_17-47-51.png" width="600px" />
+<img src="IMG/2024-01-02_22-10-15.png" width="600px" />
+<img src="IMG/2024-03-31_17-48-15.png" width="600px" />
 
 ## Support
 
@@ -35,11 +36,18 @@ Find a bug or have a feature request? Please file an <a href="https://github.com
 - [x] open
 - [x] brightness
 - [x] colors
+- [x] color temperature 
+- [x] Rename
 - [ ] scene
 - [ ] music
 - [ ] flow mode
 
 ## Update
+
+2024-03-31
+
+- rename
+- color temperature
 
 2024-01-02
 
