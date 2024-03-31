@@ -25,10 +25,18 @@ class YeeLightModel: ObservableObject {
         "tap color device \(device.host)".p()
         YeeLightManager.shared.model?.showColorPick = !(YeeLightManager.shared.model?.showColorPick ?? true)
     }
+    @Published var temperatureTapAction: GeneralCallBack<Device> = { device in
+        "tap color device \(device.host)".p()
+        YeeLightManager.shared.model?.showTemperaturePick = !(YeeLightManager.shared.model?.showTemperaturePick ?? true)
+        let ct: Double = Double(YeeLightManager.shared.model?.curItem?.ct ?? Int(Device.kMaxColorTemp))
+        YeeLightManager.shared.model?.tempProgress = ct
+    }
     @Published var higIp = ""
     @Published var showColorPick: Bool = false
+    @Published var showTemperaturePick: Bool = false
     @Published var currentColor = Color.red
     @Published var progress = 120.0
+    @Published var tempProgress = 1700.0
     @Published var curItem: Device?
 }
 
@@ -41,7 +49,7 @@ struct MainView: View {
             ScrollView (.vertical, showsIndicators: false) {
                 VStack (spacing: 10) {
                     ForEach ($model.items){ $item in
-                        MainCellContainerView(item: $item, tapActionCallBack: $model.tapAction, colorActionCallBack: $model.colorTapAction, higIp: $model.higIp)
+                        MainCellContainerView(item: $item, tapActionCallBack: $model.tapAction, colorActionCallBack: $model.colorTapAction, temperatureActionCallBack: $model.temperatureTapAction, higIp: $model.higIp)
                     }
                 }
                 .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
@@ -59,6 +67,34 @@ struct MainView: View {
                 .background(Color.init(hex: "#EBEBEA"))
                 .onTapGesture {
                     YeeLightManager.shared.model?.showColorPick = !(YeeLightManager.shared.model?.showColorPick ?? true)
+                }
+            }
+            
+            if model.showTemperaturePick {
+                ZStack {
+                    VStack (spacing: 1) {
+                        Text("\(Int(model.tempProgress))")
+//                            .background(Color.green)
+                        Slider(value: $model.tempProgress, in: Device.kMinColorTemp ... Device.kMaxColorTemp, label: {
+                                        Image(systemName: "thermometer.transmission")
+                        }) { value in
+                            if value == false {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {
+                                    guard let item = YeeLightManager.shared.model?.curItem else { return }
+                                    Socket.shared.changeTemperature(item, Int(model.tempProgress))
+                                    YeeLightManager.shared.model?.curItem?.ct = Int(model.tempProgress)
+                                })
+                            }
+                        }
+                        .frame(width: 400, height: 30)
+//                        .background(Color.red)
+                    }
+                    .frame(width: 500, height: model.items.count <= 1 ? 80 : 100)
+                }
+                .frame(width: 500, height: max(CGFloat(min($model.items.count, 4) * 70) + 10, 80))
+                .background(Color.init(hex: "#EBEBEA"))
+                .onTapGesture {
+                    YeeLightManager.shared.model?.showTemperaturePick = !(YeeLightManager.shared.model?.showTemperaturePick ?? true)
                 }
             }
             if model.items.isEmpty {

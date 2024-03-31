@@ -42,6 +42,7 @@ struct CircularSliderView: View {
                             Text("\(progress, specifier: "%.0f")")
                                 .foregroundStyle(Color.init(hex: "#1F1F24"))
                                 .font(.system(size: radius * 0.5, weight: .bold, design:.rounded))
+                                .monospacedDigit()
                         }
                     Circle()
                         .fill(Color.white)
@@ -63,7 +64,7 @@ struct CircularSliderView: View {
                 .padding(radius * 0.1)
             }
             .onAppear {
-                self.rotationAngle = Angle(degrees: progressFraction * 360.0)
+                self.rotationAngle = Angle(degrees: progressFraction * 359.0)
             }
         }
     }

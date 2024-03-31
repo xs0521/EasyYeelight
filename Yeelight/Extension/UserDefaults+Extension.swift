@@ -13,4 +13,8 @@ extension UserDefaults {
         UserDefaults.standard.set(value, forKey: defaultName)
         UserDefaults.standard.synchronize()
     }
+    
+    static func obj(_ keyName: String) -> Any? {
+        UserDefaults.standard.object(forKey: keyName)
+    }
 }

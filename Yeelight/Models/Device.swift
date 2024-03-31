@@ -18,7 +18,7 @@ struct Device: Codable, Identifiable, Hashable {
         return lhs.id == rhs.id
     }
     
-    let ct: Int
+    var ct: Int
     let name, cacheControl: String
     var power: Power {
         didSet {
@@ -34,13 +34,14 @@ struct Device: Codable, Identifiable, Hashable {
     let support: String
     let fwVer, rgb: Int
     let server, ext: String
+    var nickName: String?
     
     var open: Bool = false
     
     var high: Bool = false
 
     enum CodingKeys: String, CodingKey {
-        case ct, name, port
+        case ct, name, port, nickName
         case cacheControl = "Cache-Control"
         case power, id, host, model, hue, bright
         case date = "Date"
@@ -55,5 +56,15 @@ struct Device: Codable, Identifiable, Hashable {
     
     mutating func update() -> Void {
         open = power == .on
+        nickName = UserDefaults.obj(id) as? String
     }
+    
+    func nickEnble() -> Bool {
+        nickName != nil && nickName!.count > 0
+    }
+}
+
+extension Device {
+    static let kMaxColorTemp: Double = 6500
+    static let kMinColorTemp: Double = 1700
 }

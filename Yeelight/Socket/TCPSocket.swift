@@ -63,6 +63,10 @@ extension TCPSocket {
         sendCMD(msgType: .bright(value: bright))
     }
     
+    func changeTemperature(_ temperature: Int) -> Void {
+        sendCMD(msgType: .temperature(value: temperature))
+    }
+    
     func changeColor(_ value: Int) -> Void {
         sendCMD(msgType: .color(value: value))
     }

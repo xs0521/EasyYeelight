@@ -6,23 +6,64 @@
 //
 
 import SwiftUI
+import Combine
 
 struct MainCellContainerView: View {
     
     @Binding var item: Device
     @Binding var tapActionCallBack: GeneralCallBack<Device>
     @Binding var colorActionCallBack: GeneralCallBack<Device>
+    @Binding var temperatureActionCallBack: GeneralCallBack<Device>
     @Binding var higIp: String
     
+    @State var editName: String = ""
+    @State var enbleEditName: Bool = false
+    
     var body: some View {
-        
         VStack (alignment: .center) {
             HStack (alignment: .center) {
                 HStack {
                     Image(systemName: "network")
-                    Text(item.host)
+                    if enbleEditName && higIp == item.host ? true : false {
+                        TextField("empty is the default", text: $editName)
+                            .frame(width: 150)
+                            .textFieldStyle(.roundedBorder)
+                        Button {
+                            enbleEditName = !enbleEditName
+                            UserDefaults.set(editName, forKey: item.id)
+                            item.update()
+                        } label: {
+                            Text("save")
+                                .foregroundStyle(Color.blue)
+                                .padding(EdgeInsets(top: 3, leading: 10, bottom: 3, trailing: 10))
+                                .background(Color.init(hex: "#B5C1D8"))
+                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                        }
+                        .buttonStyle(.plain)
+                        Button {
+                            enbleEditName = !enbleEditName
+                        } label: {
+                            Text("cancel")
+                                .foregroundStyle(Color.blue)
+                                .padding(EdgeInsets(top: 3, leading: 10, bottom: 3, trailing: 10))
+                                .background(Color.init(hex: "#B5C1D8"))
+                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                        }
+                        .buttonStyle(.plain)
+                        
+                    } else {
+                        Button {
+                            enbleEditName = !enbleEditName
+                        } label: {
+                            Text(item.nickEnble() ? item.nickName! : item.host)
+                                .foregroundStyle(.blue)
+                        }
+                        .buttonStyle(.plain)
+                        .disabled(higIp == item.host ? false : true)
+                    }
+                    
                 }
-                Spacer()
+                Spacer(minLength: 5)
                 Toggle("", isOn: $item.open) // 2
                 .padding()
                 .toggleStyle(.switch)
@@ -46,7 +87,15 @@ struct MainCellContainerView: View {
                 .buttonStyle(.plain)
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 20))
                 .disabled(higIp == item.host ? false : true)
-
+                Button {
+                    temperatureActionCallBack(item)
+                } label: {
+                    Image(systemName: "thermometer.transmission")
+                        .foregroundStyle(.blue)
+                }
+                .buttonStyle(.plain)
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 20))
+                .disabled(higIp == item.host ? false : true)
             }
             .frame(height: 20)
             VStack (alignment: .center) {
@@ -78,6 +127,12 @@ struct MainCellContainerView: View {
         )
         .onTapGesture {
             tapActionCallBack(item)
+        }
+        .onReceive(Just(higIp)) { newValue in
+            let enbleHig = higIp == item.host
+            if enbleEditName && !enbleHig {
+                enbleEditName = false
+            }
         }
     }
 }

@@ -72,6 +72,13 @@ extension Socket {
         }
     }
     
+    func changeTemperature(_ device: Device, _ temperature: Int) -> Void {
+        if device == currentDevice {
+            "temperature".p()
+            tcpSocket.changeTemperature(temperature)
+        }
+    }
+    
     func changeColor(_ device: Device, _ value: Int) -> Void {
         if device == currentDevice {
             "changeBrightness".p()

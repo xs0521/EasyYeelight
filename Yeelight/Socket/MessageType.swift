@@ -13,6 +13,7 @@ enum MessageType {
     case switchOff
     case bright(value: Int)
     case color(value: Int)
+    case temperature(value: Int)
     
     var tag: Int {
         switch self {
@@ -24,6 +25,8 @@ enum MessageType {
             return 10002
         case .color:
             return 10003
+        case .temperature:
+            return 10004
         }
     }
     
@@ -37,6 +40,8 @@ enum MessageType {
             return [value, "smooth", 500]
         case .color(let value):
             return [value, 100, "smooth", 500]
+        case .temperature(let value):
+            return [value, "smooth", 500]
         }
     }
     
@@ -48,6 +53,8 @@ enum MessageType {
             return "set_bright"
         case .color:
             return "set_hsv"
+        case .temperature:
+            return "set_ct_abx"
         }
     }
     
