@@ -24,6 +24,7 @@ struct MainCellContainerView: View {
             HStack (alignment: .center) {
                 HStack {
                     Image(systemName: "network")
+                        .foregroundStyle(Color.white)
                     if enbleEditName && higIp == item.host ? true : false {
                         TextField("empty is the default", text: $editName)
                             .frame(width: 150)
@@ -56,7 +57,7 @@ struct MainCellContainerView: View {
                             enbleEditName = !enbleEditName
                         } label: {
                             Text(item.nickEnble() ? item.nickName! : item.host)
-                                .foregroundStyle(.blue)
+                                .foregroundStyle(Color.white)
                         }
                         .buttonStyle(.plain)
                         .disabled(higIp == item.host ? false : true)
@@ -65,6 +66,7 @@ struct MainCellContainerView: View {
                 }
                 Spacer(minLength: 5)
                 Toggle("", isOn: $item.open) // 2
+                    .tint(Color.green)
                 .padding()
                 .toggleStyle(.switch)
                 .onChange(of: item.open) { newValue in
@@ -82,7 +84,7 @@ struct MainCellContainerView: View {
                     colorActionCallBack(item)
                 } label: {
                     Image(systemName: "paintpalette.fill")
-                        .foregroundStyle(.blue)
+                        .foregroundStyle(Color.white)
                 }
                 .buttonStyle(.plain)
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 20))
@@ -91,7 +93,7 @@ struct MainCellContainerView: View {
                     temperatureActionCallBack(item)
                 } label: {
                     Image(systemName: "thermometer.transmission")
-                        .foregroundStyle(.blue)
+                        .foregroundStyle(Color.white)
                 }
                 .buttonStyle(.plain)
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 20))
@@ -102,6 +104,7 @@ struct MainCellContainerView: View {
                 HStack {
                     Slider(value: $item.bright, in: 0 ... 100, label: {
                                     Image(systemName: "sun.min")
+                                        .foregroundStyle(Color.white)
                     }) { value in
                         print(value)
                         if value == false {
@@ -110,8 +113,10 @@ struct MainCellContainerView: View {
                             })
                         }
                     }
+                    .tint(Color.white)
                     .disabled(higIp == item.host ? false : true)
                     Text("\(item.bright, specifier: "%.0f")")
+                                    .foregroundStyle(Color.white)
                                     .padding()
                 }
             }
@@ -121,7 +126,8 @@ struct MainCellContainerView: View {
         .frame(height: 60)
         .background(
             Rectangle()
-                .fill(higIp == item.host ? Color.blue.opacity(0.2) : Color.gray.opacity(0.1))
+//                .fill(higIp == item.host ? Color.init(hex: "1E1E1E").opacity(0.2) : Color.init(hex: "1E1E1E"))
+                .fill(Color.init(hex: "1E1E1E"))
                 .cornerRadius(10)
                             
         )

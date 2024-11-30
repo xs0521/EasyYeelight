@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		104C17159F32C565110A7698 /* Pods_Yeelight_YeelightUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0175E798D92FB567A9537A58 /* Pods_Yeelight_YeelightUITests.framework */; };
 		7EA6C181B4C5038307EFA404 /* Pods_Yeelight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE42DC1B7E896B24134AFFB0 /* Pods_Yeelight.framework */; };
+		B18057E52CFB77F900E62F9D /* NSPopover+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18057E42CFB77F900E62F9D /* NSPopover+Extension.swift */; };
+		B18057E72CFB788A00E62F9D /* NSColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18057E62CFB788A00E62F9D /* NSColor+Extension.swift */; };
 		B199EC572B41C779008C6C8A /* YeeLightManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B199EC562B41C779008C6C8A /* YeeLightManager.swift */; };
 		B199EC592B42CE06008C6C8A /* CircularSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B199EC582B42CE06008C6C8A /* CircularSliderView.swift */; };
 		B199EC5B2B42FB29008C6C8A /* Color-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B199EC5A2B42FB29008C6C8A /* Color-Extension.swift */; };
@@ -73,6 +75,8 @@
 		8007A2007F3B4A8C487E0F0D /* Pods-Yeelight-YeelightUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yeelight-YeelightUITests.release.xcconfig"; path = "Target Support Files/Pods-Yeelight-YeelightUITests/Pods-Yeelight-YeelightUITests.release.xcconfig"; sourceTree = "<group>"; };
 		88D02DCCCFB2438E7DA30D4B /* Pods-YeelightTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YeelightTests.release.xcconfig"; path = "Target Support Files/Pods-YeelightTests/Pods-YeelightTests.release.xcconfig"; sourceTree = "<group>"; };
 		AB6A3BC0A607341A82D064D6 /* Pods-Yeelight-YeelightUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yeelight-YeelightUITests.debug.xcconfig"; path = "Target Support Files/Pods-Yeelight-YeelightUITests/Pods-Yeelight-YeelightUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B18057E42CFB77F900E62F9D /* NSPopover+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPopover+Extension.swift"; sourceTree = "<group>"; };
+		B18057E62CFB788A00E62F9D /* NSColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Extension.swift"; sourceTree = "<group>"; };
 		B199EC562B41C779008C6C8A /* YeeLightManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YeeLightManager.swift; sourceTree = "<group>"; };
 		B199EC582B42CE06008C6C8A /* CircularSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularSliderView.swift; sourceTree = "<group>"; };
 		B199EC5A2B42FB29008C6C8A /* Color-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Extension.swift"; sourceTree = "<group>"; };
@@ -295,6 +299,8 @@
 				B8185D372AE3E23D003ECA97 /* Data+Extension.swift */,
 				B8185D392AE3EC76003ECA97 /* Dictionary+Extension.swift */,
 				B199EC5A2B42FB29008C6C8A /* Color-Extension.swift */,
+				B18057E42CFB77F900E62F9D /* NSPopover+Extension.swift */,
+				B18057E62CFB788A00E62F9D /* NSColor+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -541,10 +547,12 @@
 			files = (
 				B199EC592B42CE06008C6C8A /* CircularSliderView.swift in Sources */,
 				B8185D382AE3E23D003ECA97 /* Data+Extension.swift in Sources */,
+				B18057E72CFB788A00E62F9D /* NSColor+Extension.swift in Sources */,
 				B8185D3A2AE3EC76003ECA97 /* Dictionary+Extension.swift in Sources */,
 				B8F3565229A07BB700F4407A /* MainView.swift in Sources */,
 				B800A1F92AE538CA00BAA1C4 /* MessageType.swift in Sources */,
 				B800A1F42AE5202A00BAA1C4 /* Device.swift in Sources */,
+				B18057E52CFB77F900E62F9D /* NSPopover+Extension.swift in Sources */,
 				B8F3568429A1A61100F4407A /* AppEventMonitor.swift in Sources */,
 				B8F3568E29A1E89500F4407A /* MainCellContainerView.swift in Sources */,
 				B199EC5B2B42FB29008C6C8A /* Color-Extension.swift in Sources */,

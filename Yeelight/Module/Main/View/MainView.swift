@@ -64,7 +64,7 @@ struct MainView: View {
                     .frame(width: 100, height: model.items.count <= 1 ? 80 : 100)
                 }
                 .frame(width: 500, height: max(CGFloat(min($model.items.count, 4) * 70) + 10, 80))
-                .background(Color.init(hex: "#EBEBEA"))
+                .background(Color.init(hex: "#323232"))
                 .onTapGesture {
                     YeeLightManager.shared.model?.showColorPick = !(YeeLightManager.shared.model?.showColorPick ?? true)
                 }
@@ -74,9 +74,10 @@ struct MainView: View {
                 ZStack {
                     VStack (spacing: 1) {
                         Text("\(Int(model.tempProgress))")
-//                            .background(Color.green)
+                            .foregroundStyle(Color.white)
                         Slider(value: $model.tempProgress, in: Device.kMinColorTemp ... Device.kMaxColorTemp, label: {
                                         Image(systemName: "thermometer.transmission")
+                                                .foregroundStyle(Color.white)
                         }) { value in
                             if value == false {
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {
@@ -86,13 +87,14 @@ struct MainView: View {
                                 })
                             }
                         }
+                        .tint(Color.white)
                         .frame(width: 400, height: 30)
 //                        .background(Color.red)
                     }
                     .frame(width: 500, height: model.items.count <= 1 ? 80 : 100)
                 }
                 .frame(width: 500, height: max(CGFloat(min($model.items.count, 4) * 70) + 10, 80))
-                .background(Color.init(hex: "#EBEBEA"))
+                .background(Color.init(hex: "#323232"))
                 .onTapGesture {
                     YeeLightManager.shared.model?.showTemperaturePick = !(YeeLightManager.shared.model?.showTemperaturePick ?? true)
                 }
@@ -103,6 +105,7 @@ struct MainView: View {
         }
         ///cell height 60 space 10
         .frame(width: 500, height: max(CGFloat(min($model.items.count, 4) * 70) + 10, 80))
+        .background(Color.init(hex: "323232"))
         .onAppear{
             socketCallBack()
             request()

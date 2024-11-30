@@ -82,6 +82,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         popover.appearance = NSAppearance(named: .aqua)
         popover.behavior = .transient
         popover.contentSize = CGSize(width: 500, height: 140)
+        popover.behavior = .transient
+        popover.backgroundColor = NSColor.init(hex: "323232")
         popover.contentViewController = NSHostingController(rootView: MainView())
         
         if let button = statusItem.button {
