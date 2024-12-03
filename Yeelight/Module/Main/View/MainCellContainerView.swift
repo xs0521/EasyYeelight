@@ -27,9 +27,20 @@ struct MainCellContainerView: View {
                         .foregroundStyle(Color.theme([Color.white, Color.black])!)
                         .opacity(higIp == item.host ? 1.0 : 0.5)
                     if enbleEditName && higIp == item.host ? true : false {
-                        TextField("empty is the default", text: $editName)
-                            .frame(width: 150)
-                            .textFieldStyle(.plain)
+                        ZStack {
+                            if editName.isEmpty {
+                                HStack {
+                                    Text("empty is the default")
+                                        .foregroundStyle(Color.theme([Color.white, Color.black])!)
+                                        .opacity(0.6)
+                                    Spacer()
+                                }
+                            }
+                            TextField("", text: $editName)
+                                .textFieldStyle(.plain)
+                                .foregroundStyle(Color.theme([Color.white, Color.black])!)
+                        }
+                        .frame(width: 150)
                         Button {
                             enbleEditName = !enbleEditName
                             UserDefaults.set(editName, forKey: item.id)
