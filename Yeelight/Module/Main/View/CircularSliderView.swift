@@ -40,7 +40,7 @@ struct CircularSliderView: View {
                         .rotationEffect(Angle(degrees: -90))
                         .overlay() {
                             Text("\(progress, specifier: "%.0f")")
-                                .foregroundStyle(Color.white)
+                                .foregroundStyle(Color.theme([Color.white, Color.black])!)
                                 .font(.system(size: radius * 0.5, weight: .bold, design:.rounded))
                                 .monospacedDigit()
                         }

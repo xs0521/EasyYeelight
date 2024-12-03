@@ -68,13 +68,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private var statusItem: NSStatusItem!
     private var popover: NSPopover!
     private var menu: NSMenu!
-        
+    
+    private var appearanceManager = AppearanceManager.shared
+    
     func applicationDidFinishLaunching(_ notification: Notification) {
         
-/// hidden window
-//        if let window = NSApplication.shared.windows.first {
-//            window.close()
-//        }
+        /// hidden window
+        //        if let window = NSApplication.shared.windows.first {
+        //            window.close()
+        //        }
+        
+//        NotificationCenter.default.addObserver(
+//            self,
+//            selector: #selector(systemAppearanceChanged),
+//            name: NSNotification.Name(rawValue: "AppleInterfaceThemeChangedNotification"),
+//            object: nil
+//        )
+        
+        appearanceManager.updateColorScheme()
         
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
         
@@ -83,8 +94,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         popover.behavior = .transient
         popover.contentSize = CGSize(width: 500, height: 140)
         popover.behavior = .transient
-        popover.backgroundColor = NSColor.init(hex: "323232")
+        popover.backgroundColor = appearanceManager.popBackgroundColor()
         popover.contentViewController = NSHostingController(rootView: MainView())
+        
+        
+        appearanceManager.updateColorSchemeCallBack = { [weak self] (colorScheme) in
+            guard let self = self else { return }
+            self.popover.backgroundColor = self.appearanceManager.popBackgroundColor()
+        }
         
         if let button = statusItem.button {
             button.image = NSImage(systemSymbolName: "lightbulb.2.fill", accessibilityDescription: "popButton")
@@ -109,8 +126,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         Socket.shared.config()
     }
-    
-    
     
     @objc
     func showPopover(_ sender: AnyObject) {

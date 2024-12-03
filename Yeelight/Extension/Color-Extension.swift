@@ -21,4 +21,8 @@ extension Color {
         let blueValue = Double(rgb & 0xFF) / 255.0
         self.init(red: redValue, green: greenValue, blue: blueValue)
     }
+    
+    static func theme(_ list: [Color]) -> Color? {
+        AppearanceManager.shared.colorScheme == .dark ? list.first : list.last
+    }
 }

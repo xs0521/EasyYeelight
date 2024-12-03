@@ -24,31 +24,30 @@ struct MainCellContainerView: View {
             HStack (alignment: .center) {
                 HStack {
                     Image(systemName: "network")
-                        .foregroundStyle(Color.white)
+                        .foregroundStyle(Color.theme([Color.white, Color.black])!)
+                        .opacity(higIp == item.host ? 1.0 : 0.5)
                     if enbleEditName && higIp == item.host ? true : false {
                         TextField("empty is the default", text: $editName)
                             .frame(width: 150)
-                            .textFieldStyle(.roundedBorder)
+                            .textFieldStyle(.plain)
                         Button {
                             enbleEditName = !enbleEditName
                             UserDefaults.set(editName, forKey: item.id)
                             item.update()
                         } label: {
-                            Text("save")
-                                .foregroundStyle(Color.blue)
-                                .padding(EdgeInsets(top: 3, leading: 10, bottom: 3, trailing: 10))
-                                .background(Color.init(hex: "#B5C1D8"))
-                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                            Image(systemName: "location.circle")
+                                .font(.system(size: 16))
+                                .foregroundStyle(Color.theme([Color.white, Color.black])!)
+                                .opacity(higIp == item.host ? 1.0 : 0.5)
                         }
                         .buttonStyle(.plain)
                         Button {
                             enbleEditName = !enbleEditName
                         } label: {
-                            Text("cancel")
-                                .foregroundStyle(Color.blue)
-                                .padding(EdgeInsets(top: 3, leading: 10, bottom: 3, trailing: 10))
-                                .background(Color.init(hex: "#B5C1D8"))
-                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                            Image(systemName: "xmark.square")
+                                .font(.system(size: 16))
+                                .foregroundStyle(Color.theme([Color.white, Color.black])!)
+                                .opacity(higIp == item.host ? 1.0 : 0.5)
                         }
                         .buttonStyle(.plain)
                         
@@ -57,7 +56,7 @@ struct MainCellContainerView: View {
                             enbleEditName = !enbleEditName
                         } label: {
                             Text(item.nickEnble() ? item.nickName! : item.host)
-                                .foregroundStyle(Color.white)
+                                .foregroundStyle(Color.theme([Color.white, Color.black])!)
                         }
                         .buttonStyle(.plain)
                         .disabled(higIp == item.host ? false : true)
@@ -66,7 +65,7 @@ struct MainCellContainerView: View {
                 }
                 Spacer(minLength: 5)
                 Toggle("", isOn: $item.open) // 2
-                    .tint(Color.green)
+                    .tint(Color.theme([Color.green, Color.blue]))
                 .padding()
                 .toggleStyle(.switch)
                 .onChange(of: item.open) { newValue in
@@ -84,7 +83,7 @@ struct MainCellContainerView: View {
                     colorActionCallBack(item)
                 } label: {
                     Image(systemName: "paintpalette.fill")
-                        .foregroundStyle(Color.white)
+                        .foregroundStyle(Color.theme([Color.white, Color.blue])!)
                 }
                 .buttonStyle(.plain)
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 20))
@@ -93,7 +92,7 @@ struct MainCellContainerView: View {
                     temperatureActionCallBack(item)
                 } label: {
                     Image(systemName: "thermometer.transmission")
-                        .foregroundStyle(Color.white)
+                        .foregroundStyle(Color.theme([Color.white, Color.blue])!)
                 }
                 .buttonStyle(.plain)
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 20))
@@ -104,7 +103,7 @@ struct MainCellContainerView: View {
                 HStack {
                     Slider(value: $item.bright, in: 0 ... 100, label: {
                                     Image(systemName: "sun.min")
-                                        .foregroundStyle(Color.white)
+                                        .foregroundStyle(Color.theme([Color.white, Color.black])!)
                     }) { value in
                         print(value)
                         if value == false {
@@ -113,10 +112,11 @@ struct MainCellContainerView: View {
                             })
                         }
                     }
-                    .tint(Color.white)
+                    .tint(Color.theme([Color.green, Color.blue]))
                     .disabled(higIp == item.host ? false : true)
                     Text("\(item.bright, specifier: "%.0f")")
-                                    .foregroundStyle(Color.white)
+                                    .foregroundStyle(Color.theme([Color.white, Color.black])!)
+                                    .opacity(higIp == item.host ? 1.0 : 0.5)
                                     .padding()
                 }
             }
@@ -126,8 +126,7 @@ struct MainCellContainerView: View {
         .frame(height: 60)
         .background(
             Rectangle()
-//                .fill(higIp == item.host ? Color.init(hex: "1E1E1E").opacity(0.2) : Color.init(hex: "1E1E1E"))
-                .fill(Color.init(hex: "1E1E1E"))
+                .fill(Color.theme([Color.init(hex: "1E1E1E"), Color.init(hex: "FAFAFA")])!)
                 .cornerRadius(10)
                             
         )

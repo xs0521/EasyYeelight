@@ -11,6 +11,7 @@
 		7EA6C181B4C5038307EFA404 /* Pods_Yeelight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE42DC1B7E896B24134AFFB0 /* Pods_Yeelight.framework */; };
 		B18057E52CFB77F900E62F9D /* NSPopover+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18057E42CFB77F900E62F9D /* NSPopover+Extension.swift */; };
 		B18057E72CFB788A00E62F9D /* NSColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18057E62CFB788A00E62F9D /* NSColor+Extension.swift */; };
+		B18057EB2CFF54EF00E62F9D /* AppearanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18057EA2CFF54EF00E62F9D /* AppearanceManager.swift */; };
 		B199EC572B41C779008C6C8A /* YeeLightManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B199EC562B41C779008C6C8A /* YeeLightManager.swift */; };
 		B199EC592B42CE06008C6C8A /* CircularSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B199EC582B42CE06008C6C8A /* CircularSliderView.swift */; };
 		B199EC5B2B42FB29008C6C8A /* Color-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B199EC5A2B42FB29008C6C8A /* Color-Extension.swift */; };
@@ -77,6 +78,7 @@
 		AB6A3BC0A607341A82D064D6 /* Pods-Yeelight-YeelightUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yeelight-YeelightUITests.debug.xcconfig"; path = "Target Support Files/Pods-Yeelight-YeelightUITests/Pods-Yeelight-YeelightUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B18057E42CFB77F900E62F9D /* NSPopover+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPopover+Extension.swift"; sourceTree = "<group>"; };
 		B18057E62CFB788A00E62F9D /* NSColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Extension.swift"; sourceTree = "<group>"; };
+		B18057EA2CFF54EF00E62F9D /* AppearanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceManager.swift; sourceTree = "<group>"; };
 		B199EC562B41C779008C6C8A /* YeeLightManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YeeLightManager.swift; sourceTree = "<group>"; };
 		B199EC582B42CE06008C6C8A /* CircularSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularSliderView.swift; sourceTree = "<group>"; };
 		B199EC5A2B42FB29008C6C8A /* Color-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Extension.swift"; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				B800A1F32AE5202A00BAA1C4 /* Device.swift */,
+				B18057EA2CFF54EF00E62F9D /* AppearanceManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -564,6 +567,7 @@
 				B8185D3E2AE42F6F003ECA97 /* TCPSocket.swift in Sources */,
 				B8185D3C2AE40657003ECA97 /* UDPSocket.swift in Sources */,
 				B800A1F12AE4CB9900BAA1C4 /* AppConst.swift in Sources */,
+				B18057EB2CFF54EF00E62F9D /* AppearanceManager.swift in Sources */,
 				B8A34EA32AEE05EF00EC5109 /* YeelightApp.swift in Sources */,
 				B8F3568A29A1B76100F4407A /* UserDefaults+Extension.swift in Sources */,
 			);

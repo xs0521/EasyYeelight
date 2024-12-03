@@ -8,3 +8,4 @@
 import Foundation
 
 typealias GeneralCallBack<T> = (T) -> Void
+typealias GeneralCallBackVoid = () -> Void
