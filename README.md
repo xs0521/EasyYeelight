@@ -24,7 +24,7 @@ The latest official **installers** and **portable versions** for macOS can be fo
 - **Apple Chips**: Open a terminal and run this command:
 
 ```
-    sudo xattr -r -d com.apple.quarantine /Applications/EasyYeelight.app
+    sudo xattr -r -d com.apple.quarantine /Applications/Yeelight.app
 ```
 
 ## Feedback
